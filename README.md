@@ -16,4 +16,4 @@ $ bower install
 # start the server
 $ Gulp run
 ```
-go to [http://localhost:8080](http://localhost:8080) in your browser.
+go to [http://localhost:5000](http://localhost:5000) in your browser.
