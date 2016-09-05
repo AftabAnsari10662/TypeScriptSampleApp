@@ -4,18 +4,32 @@ var browserSync = require('browser-sync');
 superstatic = require('superstatic');
 
 var typescriptSrc = './src/app/**/*.ts';
+var es5Dest = './src/dist/es5';
 
-gulp.task('toes5', function() {
+var es2015Dest = './src/dist/es2015';
+
+gulp.task('toes5', function () {
     gulp.src(typescriptSrc)
-    .pipe(tsc({
-        module:"amd",
-        target:"es5"
-    }))
-    .pipe(gulp.dest('./src/dist/es5'))
+        .pipe(tsc({
+            module: "amd",
+            target: "es5"
+        }))
+        .pipe(gulp.dest(es5Dest))
 });
 
-gulp.task('watch', function() {
-    gulp.watch([typescriptSrc],['toes5']);
+
+gulp.task('toes2015', function () {
+    gulp.src(typescriptSrc)
+        .pipe(tsc({
+            module: "amd",
+            target: "es2015"
+        }))
+        .pipe(gulp.dest(es2015Dest))
+});
+
+
+gulp.task('watch', function () {
+    gulp.watch([typescriptSrc], ['toes5']);
 });
 
 
