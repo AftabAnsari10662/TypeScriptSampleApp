@@ -19,7 +19,7 @@ export class Person {
     }
 
     getDetail(): void {
-        console.log(`${this.name} is ${this.age} year old`);
+        console.log(`${this.name} is ${this.age} year old.`);
     }
 }
 

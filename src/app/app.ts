@@ -1,20 +1,8 @@
 
 import { Greeter } from "./Greeter"
-export class App {
 
-    greeter: Greeter;
+var greeter:Greeter = new Greeter("Aftab");
 
-    constructor() {
-
-        this.greeter = new Greeter("Aftab");
-
-    }
-
-    run(): void {
-
-        this.greeter.sayHello();
-        this.greeter.sayGoodMorning();
-        this.greeter.sayGoodBye();
-    }
-
-}
+greeter.sayHello();
+greeter.sayGoodMorning();
+greeter.sayGoodBye();

@@ -20,7 +20,7 @@ define(["require", "exports"], function (require, exports) {
             configurable: true
         });
         Person.prototype.getDetail = function () {
-            console.log(this.name + " is " + this.age + " year old");
+            console.log(this.name + " is " + this.age + " year old.");
         };
         return Person;
     }());
