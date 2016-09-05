@@ -7,6 +7,7 @@ var typescriptSrc = './src/app/**/*.ts';
 var es5Dest = './src/dist/es5';
 
 var es2015Dest = './src/dist/es2015';
+var commonjsDest = './src/dist/commonjs';
 
 gulp.task('toes5', function () {
     gulp.src(typescriptSrc)
@@ -28,12 +29,22 @@ gulp.task('toes2015', function () {
 });
 
 
+gulp.task('toCommonJs', function () {
+    gulp.src(typescriptSrc)
+        .pipe(tsc({
+            module: "commonjs",
+            target: "es5"
+        }))
+        .pipe(gulp.dest(commonjsDest))
+});
+
+
 gulp.task('watch', function () {
     gulp.watch([typescriptSrc], ['toes5']);
 });
 
 
-gulp.task('run', ['toes5', 'watch'], function () {
+gulp.task('run', ['toes2015', 'watch'], function () {
     process.stdout.write('Starting browserSync and superstatic...\n');
     browserSync({
         port: 5000,
