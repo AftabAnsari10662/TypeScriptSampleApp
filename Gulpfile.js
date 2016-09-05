@@ -44,7 +44,7 @@ gulp.task('watch', function () {
 });
 
 
-gulp.task('run', ['toes2015', 'watch'], function () {
+gulp.task('run', ['toes5', 'watch'], function () {
     process.stdout.write('Starting browserSync and superstatic...\n');
     browserSync({
         port: 5000,

@@ -1,7 +1,7 @@
 require.config(
     {
 
-        baseUrl: "dist/es2015"
+        baseUrl: "dist/es5"
     }
 )
 

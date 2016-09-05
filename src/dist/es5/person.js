@@ -25,6 +25,4 @@ define(["require", "exports"], function (require, exports) {
         return Person;
     }());
     exports.Person = Person;
-    var person = new Person("Aftab Ansari", 22);
-    person.getDetail();
 });

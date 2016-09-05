@@ -22,6 +22,3 @@ export class Person {
         console.log(`${this.name} is ${this.age} year old.`);
     }
 }
-
-let person = new Person("Aftab Ansari", 22);
-person.getDetail();
