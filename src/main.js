@@ -5,7 +5,8 @@ require.config(
     }
 )
 
-require(["app"], function(app){
+require(["app","person"], function(app,person){
 
-    new app.App().run();
+
+    //new app.App().run();
 })
