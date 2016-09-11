@@ -1,12 +1,20 @@
-require.config(
-    {
+(function () {
 
-        baseUrl: "dist/es5"
-    }
-)
+var jQueryPath = "./bower_components/jquery/jquery.js";
 
-require(["app", "person"], function (app, person) {
+    require.config(
+        {
 
+            baseUrl: "dist/es5",
+            paths:{
+                jquery:jQueryPath
+            }
+        }
+    )
 
-    //new app.App().run();
-})
+    require(["app"], function (app) {
+
+    })
+
+} ())
+
