@@ -1,5 +1,7 @@
-/// <reference path="../typings/angularjs/angular.d.ts" />
+/// <reference path="../typings/tsd.d.ts"/>
 
+import * as $ from "jquery";
+import * as angular from "angular";
 let clickHandler = () => alert("Who clicked me??");
 
 $(".btn").click(clickHandler);

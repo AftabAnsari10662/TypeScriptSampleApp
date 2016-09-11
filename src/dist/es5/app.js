@@ -1,5 +1,5 @@
-/// <reference path="../typings/angularjs/angular.d.ts" />
-define(["require", "exports", "./Company"], function (require, exports, Company_1) {
+/// <reference path="../typings/tsd.d.ts"/>
+define(["require", "exports", "jquery", "angular", "./Company"], function (require, exports, $, angular, Company_1) {
     "use strict";
     var clickHandler = function () { return alert("Who clicked me??"); };
     $(".btn").click(clickHandler);
