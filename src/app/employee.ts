@@ -11,7 +11,7 @@ export class Employee extends Person implements IEmployee {
     constructor(name: string, age: number) {
         super(name, age);
     }
-    doWork(): void {
+doWork(): void {
         console.log(`${this.name} is working`);
     }
 

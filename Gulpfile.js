@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var tsc = require('gulp-typescript');
 var browserSync = require('browser-sync');
-superstatic = require('superstatic');
+var superstatic = require('superstatic');
 
 var typescriptSrc = './src/app/**/*.ts';
 var es5Dest = './src/dist/es5';
